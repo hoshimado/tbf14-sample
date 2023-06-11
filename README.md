@@ -1,32 +1,26 @@
-# 4章：Docker Compose を利用して複数のコンテナーを起動する
+=======
+# 2章：Web アプリケーションを格納してDocker イメージを作成する
 
-本ブランチでは4章の記載内容にフォーカスするため、
-2章で利用したサンプルコードは格納していません。
+Node.jsのExpressフレームワークを用いたWebアプリケーションをサンプルに利用します。
+Webアプリケーションの実行確認自体はDockerコンテナー内で行うので、
+本文の説明にしたがって実行する範囲においては、Node.js環境は不要です。
 
-2章で案内のDockerイメージを作成後の状態で、
-本ブランチのファイルを利用して本文中に案内のコマンドを実行してください。
+Dockerコンテナーを用いずに、ホスト環境で本サンプルの
+Webアプリケーションの動作確認をする場合は、Node.js環境をセットアップください。
 
-# §4.3： Docker Compose ファイルを用いて複数コンテナー起動を簡略化する
 
-* リスト4.4, Docker-Composeの設定ファイル
-    * [docker-compose.yml](./docker-compose.yml)
 
-上記に追加で、以下のファイルを作成して格納します（※gitignore対象としているため個別作成）。
+# §2.1：Docker コンテキストの格納フォルダーを作成する
 
-* .env
-
-```.env
-ENV_TEST=hogefugapiyo
-```
+本節で利用するDockerfileと動作確認済みのWebアプリケーションはこちらのリポジトリの本ブランチから取得ください。
 
 以下、本文中のコマンドをメモします。
 
-```
-docker compose up -d
-```
+* リスト2.5, タグ名を付けてDockerfileを用いてDockerイメージを構築する
 
 ```
-docker compose down
+docker build ./ -t hoshimado/node16-webapp:0.0.1
 ```
+
 
 
