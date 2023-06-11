@@ -1,26 +1,26 @@
-=======
-# 2章：Web アプリケーションを格納してDocker イメージを作成する
+# 「Windows環境で任意のWebアプリをDockerコンテナー起動する」本向けサンプルコード
 
-Node.jsのExpressフレームワークを用いたWebアプリケーションをサンプルに利用します。
-Webアプリケーションの実行確認自体はDockerコンテナー内で行うので、
-本文の説明にしたがって実行する範囲においては、Node.js環境は不要です。
+本リポジトリでは、掲題の本に対するサンプルコードを提供しします。
 
-Dockerコンテナーを用いずに、ホスト環境で本サンプルの
-Webアプリケーションの動作確認をする場合は、Node.js環境をセットアップください。
+掲題の本は下記で頒布中です。
 
+* [技術書典オンラインマーケット内頒布ページ](https://techbookfest.org/product/hS161Fw4TpSPcDENTnDbPa)
+* [BOOTH内頒布ページ](https://xingyanhuan.booth.pm/items/4837814)
 
 
-# §2.1：Docker コンテキストの格納フォルダーを作成する
+※リンク先はbranchです。1章と3章にはサンプルコードはありません。
 
-本節で利用するDockerfileと動作確認済みのWebアプリケーションはこちらのリポジトリの本ブランチから取得ください。
 
-以下、本文中のコマンドをメモします。
+## 2章
 
-* リスト2.5, タグ名を付けてDockerfileを用いてDockerイメージを構築する
+* §2.1, Dockerコンテキストの格納フォルダーを作成する
+    * [chapter2section1-webapp-docker](https://github.com/hoshimado/tbf14-sample/tree/chapter2section1-webapp-docker)
 
-```
-docker build ./ -t hoshimado/node16-webapp:0.0.1
-```
+## 4章
 
+* §4.1, リバースプロキシの準備
+    * [chapter4section1-nginx-reverse-proxy](https://github.com/hoshimado/tbf14-sample/tree/chapter4section1-nginx-reverse-proxy)
+* §4.3, Docker Composeファイルを用いて複数コンテナー起動を簡略化する
+    * [chapter4section3-compose](https://github.com/hoshimado/tbf14-sample/tree/chapter4section3-compose)
 
 
