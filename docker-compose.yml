@@ -1,0 +1,25 @@
+version: "3"
+services:
+  nginx:
+    container_name: nginx-container
+    image: nginx:1.24.0-alpine-slim
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - my-network
+
+  app:
+    container_name: app-container
+    image: hoshimado/node16-webapp:0.0.1
+    expose:
+      - "3000"
+    networks:
+      - my-network
+    # 環境変数をファイルで指定
+    # ※.gitignore で「.env」「.env.test」は対象外に設定済み。
+    env_file: .env
+
+networks:
+  my-network:
