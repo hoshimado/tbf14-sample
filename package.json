@@ -1,0 +1,22 @@
+{
+  "name": "sample-for-tbf14-docker-express",
+  "version": "0.0.1",
+  "description": "本「Windows環境で任意のWebアプリをDockerコンテナー起動する」で利用するサンプルです",
+  "main": "server.js",
+  "scripts": {
+    "dev": "cross-env DEBUG=myapp:* node-dev server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "morgan": "~1.9.1"
+  },
+  "author": "hoshimado",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "node-dev": "^8.0.0"
+  }
+}
